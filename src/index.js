@@ -1,3 +1,3 @@
 'use strict';
 
-console.log('Hello TS');
+console.log(process.env.TEST);
