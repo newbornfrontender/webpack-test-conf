@@ -6,31 +6,31 @@
 
 import webpack from 'webpack';
 
-// Plugins
-// -----------------------------------------------------------------------------
-
 import merge from 'webpack-merge';
 
 // +-------+-------------------------------------------------------------------+
 // | Title | Webpack parts                                                     |
 // +-------+-------------------------------------------------------------------+
 
-import mode from '../parts/mode';
 import output from '../parts/output';
 
 // +-------+-------------------------------------------------------------------+
 // | Title | Webpack configs                                                   |
 // +-------+-------------------------------------------------------------------+
 
+import DotenvWebpack from '../parts/plugins/DotenvWebpack';
+
+const plugins: webpack.Configuration = merge([
+  DotenvWebpack,
+]);
+
 import commonConfig from './webpack.config.common';
 
 const productionConfig: webpack.Configuration = merge([
-  mode,
   output({}),
+  plugins,
 ]);
 
-const config: webpack.Configuration = merge([
-  commonConfig, productionConfig,
-]);
+const config: webpack.Configuration = merge([ commonConfig, productionConfig ]);
 
 export default config;
