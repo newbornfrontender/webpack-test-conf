@@ -1,0 +1,23 @@
+{
+  "name": "webpack-test-ts-conf",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config build/configs/webpack.config.production.ts"
+  },
+  "description": "TypeScript webpack config",
+  "repository": "https://github.com/newbornfrontender/webpack-test-conf.git",
+  "author": "Infant Frontender <newbornfrontender@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.5.3",
+    "@types/webpack": "^4.4.8",
+    "chalk": "^2.4.1",
+    "cross-env": "^5.2.0",
+    "dotenv-webpack": "^1.5.7",
+    "ts-node": "^7.0.0",
+    "typescript": "^3.1.0-dev.20180725",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.3"
+  }
+}
