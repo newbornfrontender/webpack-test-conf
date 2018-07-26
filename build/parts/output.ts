@@ -11,11 +11,11 @@ import { log, resolve } from '../modules/utils';
 // +-------+-------------------------------------------------------------------+
 
 const config = ({ path, filename }: any) => (
-  log({
+  log.props({
     prop: path,
     msg: 'The "path" property in "output.ts" was changed!',
   }),
-  log({
+  log.props({
     prop: filename,
     msg: 'The "filename" property in "output.ts" was changed!',
   }),

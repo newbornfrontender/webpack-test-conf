@@ -11,7 +11,7 @@ import { log } from '../modules/utils';
 // +-------+-------------------------------------------------------------------+
 
 const config = ({ entry }: any) => (
-  log({
+  log.props({
     prop: entry,
     msg: 'The "entry" property in "entry.ts" was changed!',
   }),
