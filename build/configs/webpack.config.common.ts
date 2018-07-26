@@ -15,6 +15,7 @@ import merge from 'webpack-merge';
 // | Title | Webpack parts                                                     |
 // +-------+-------------------------------------------------------------------+
 
+import mode from '../parts/mode';
 import entry from '../parts/entry';
 
 // +-------+-------------------------------------------------------------------+
@@ -22,6 +23,7 @@ import entry from '../parts/entry';
 // +-------+-------------------------------------------------------------------+
 
 const config: webpack.Configuration = merge([
+  mode({}),
   entry({}),
 ]);
 
