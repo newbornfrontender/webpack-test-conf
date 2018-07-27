@@ -1,9 +1,9 @@
 'use strict';
 
-import { getResolvePath } from './parts/resolve';
-import { getConsoleLog } from './parts/log';
+import { getResolvePath } from './parts/getResolvePath';
+import { getConsoleLog } from './parts/getConsoleLog';
 
 export {
-  getResolvePath as resolve,
-  getConsoleLog as log,
+  getResolvePath as resolvePath,
+  getConsoleLog as consoleLog,
 };
