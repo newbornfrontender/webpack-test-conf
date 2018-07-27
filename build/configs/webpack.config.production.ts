@@ -4,7 +4,7 @@
 // | Title | Webpack utils                                                     |
 // +-------+-------------------------------------------------------------------+
 
-import webpack from 'webpack';
+import { Configuration } from 'webpack';
 
 import merge from 'webpack-merge';
 
@@ -20,17 +20,17 @@ import output from '../parts/output';
 
 import DotenvWebpack from '../parts/plugins/DotenvWebpack';
 
-const plugins: webpack.Configuration = merge([
+const plugins: Configuration = merge(
   DotenvWebpack,
-]);
+);
 
 import commonConfig from './webpack.config.common';
 
-const productionConfig: webpack.Configuration = merge([
+const productionConfig: Configuration = merge(
   output({}),
   plugins,
-]);
+);
 
-const config: webpack.Configuration = merge([ commonConfig, productionConfig ]);
+const config: Configuration = merge( commonConfig, productionConfig );
 
 export default config;

@@ -1,16 +1,22 @@
 'use strict';
 
 // +-------+-------------------------------------------------------------------+
-// | Title | Webpack utils                                                     |
+// | Title | Imports                                                           |
 // +-------+-------------------------------------------------------------------+
 
-import webpack from 'webpack';
+// Utils
+// -----------------------------------------------------------------------------
 
-import { resolve } from '../../modules/utils';
+// Webpack utils
 
-// +-------+-------------------------------------------------------------------+
-// | Title | Webpack plugins                                                   |
-// +-------+-------------------------------------------------------------------+
+import { Configuration } from 'webpack';
+
+// Config utils
+
+import { resolvePath } from '../../modules/utils';
+
+// Webpack plugins
+// -----------------------------------------------------------------------------
 
 import DotenvWebpack from 'dotenv-webpack';
 
@@ -18,10 +24,10 @@ import DotenvWebpack from 'dotenv-webpack';
 // | Title | Webpack configs                                                   |
 // +-------+-------------------------------------------------------------------+
 
-const config: webpack.Configuration = {
+const config: Configuration = {
   plugins: [
     new DotenvWebpack({
-      path: resolve({ dir: '.env' }),
+      path: resolvePath({ dir: '.env' }),
       safe: false,
       systemvars: true,
       silent: false,
